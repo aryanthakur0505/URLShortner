@@ -12,7 +12,7 @@ pwd = os.getenv("MONGODB_PASSWORD")
 
 print("uname",uname, "pwd", pwd)
 
-uri = "mongodb://localhost:27017/"
+uri = "mongodb://mongodbcontainer:27017/"
 
 
 # Create a new client to establish a connection to the MongoDB server

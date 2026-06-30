@@ -12,6 +12,15 @@ services:
     networks:
       - mynetwork
 
+  # Database service
+  mongodb:
+    container_name: mongodbcontainer
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - mynetwork
+
   # Server service
   server:
     container_name: servercontainer
@@ -23,7 +32,8 @@ services:
     env_file:
       - ./server/.env # Map container port to host port
     depends_on:
-      - memcached # Ensure memcached service is started before the client
+      - memcached # Ensure memcached service is started before the server
+      - mongodb
     networks:
       - mynetwork
 

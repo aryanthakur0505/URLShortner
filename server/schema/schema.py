@@ -4,7 +4,8 @@ It typically defines the fields present in the documents, their data types, and 
 """
 
 from pydantic import BaseModel
+from typing import Optional
 
 class UrlMappingSchema(BaseModel):
-    short_url: str
+    short_url: Optional[str] = None
     long_url: str

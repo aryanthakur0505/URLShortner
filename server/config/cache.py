@@ -2,7 +2,7 @@ from pymemcache.client.base import Client
 
 # # memcache_host = "memcachedcontainer" # to run in docker, uncomment 
 # # memcache_host = "localhost" # to run locally, uncomment
-memcache_host = "localhost"
+memcache_host = "memcachedcontainer"
 memcache_port = 11211
 
 # Create a client to connect to Memcached
